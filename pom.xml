@@ -147,10 +147,10 @@
 				</executions>
 			</plugin>
 
-			<plugin>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>3.0.0</version>
-			</plugin>
+			<!--<plugin>-->
+				<!--<artifactId>maven-war-plugin</artifactId>-->
+				<!--<version>3.0.0</version>-->
+			<!--</plugin>-->
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -190,16 +190,16 @@
 
 		</plugins>
 		<resources>
-			<!-- 打包时将jsp文件拷贝到META-INF目录下-->
-			<resource>
-				<!-- 指定resources插件处理哪个目录下的资源文件 -->
-				<directory>src/main/webapp</directory>
-				<!--注意此次必须要放在此目录下才能被访问到-->
-				<targetPath>META-INF/resources</targetPath>
-				<includes>
-					<include>**/**</include>
-				</includes>
-			</resource>
+			<!-- 打包时将jsp文件拷贝到META-INF目录下  打包会重复-->
+			<!--<resource>-->
+				<!--&lt;!&ndash; 指定resources插件处理哪个目录下的资源文件 &ndash;&gt;-->
+				<!--<directory>src/main/webapp</directory>-->
+				<!--&lt;!&ndash;注意此次必须要放在此目录下才能被访问到&ndash;&gt;-->
+				<!--<targetPath>META-INF/resources</targetPath>-->
+				<!--<includes>-->
+					<!--<include>**/**</include>-->
+				<!--</includes>-->
+			<!--</resource>-->
 			<resource>
 				<directory>src/main/resources</directory>
 				<includes>
